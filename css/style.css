@@ -1,16 +1,3 @@
-/* :root {
-    margin: 0;
-    padding: 0;
-    --primary-color: #0000FF;
-    --body-fonts: "Helvetica", "Arial", sans-serif;
-    --line-height: 1.5;
-  }
-  
-  p {
-    color: var(--primary-color);
-    font-family: var(--body-fonts);
-    line-height: var(--line-height);
-  } */
 :root {
   --primary-color: #65bba0;
   --secondary-color: #ed661f;
@@ -59,11 +46,18 @@ h6 {
   padding: 0;
 }
 
+.logo {
+  font-family: "Gochi Hand", cursive;
+
+  letter-spacing: 10px;
+  font-size: 50px;
+}
 /* main-section */
 
 .banner {
-  min-height: 90vh;
+  min-height: 80vh;
   /* padding-top: 22vh; */
 }
-.banner h4 {
+.isShow {
+  display: none;
 }

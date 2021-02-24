@@ -9,6 +9,11 @@
       integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Potta+One&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
     <title>Mini Url</title>
@@ -17,17 +22,23 @@
     <nav class="navbar navbar-light">
       <div class="container">
         <a class="navbar-brand" href="#">
-          <h2 width="30" height="30" class="d-inline-block align-top" alt="">
-            Mini url
+          <h2
+            width="30"
+            height="30"
+            class="logo d-inline-block align-top pb-5"
+            alt=""
+          >
+            <span style="color: #0e8557">Mini</span>
+            <span style="color: #ed661f">url</span>
           </h2>
         </a>
       </div>
     </nav>
-    <div class="container banner d-flex flex-column justify-content-around">
+    <div class="container banner d-flex flex-column justify-content-start pt-5">
       <div class="row">
         <div class="col-md-6">
           <div>
-            <h4 class="mb-3 lead">Enter a long URL to make a miniURL</h4>
+            <h4 class="mb-3 lead">Enter a long URL to make a Mini URL</h4>
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text">🔗</span>
@@ -36,6 +47,13 @@
 
               <div class="input-group-append">
                 <button
+                  id="cleanBtn"
+                  onclick="clearForm()"
+                  class="input-group-text isShow"
+                >
+                  🧹
+                </button>
+                <button
                   type="submit"
                   onclick="submitForm()"
                   class="input-group-text"
@@ -43,10 +61,13 @@
                   ✂️
                 </button>
               </div>
+              <div id="validationServer03Feedback" class="invalid-feedback">
+                Please enter a valid URL!
+              </div>
             </div>
           </div>
           <div class="mt-5">
-            <h4 class="mb-3 lead">miniURL</h4>
+            <h4 class="mb-3 lead">Mini URL</h4>
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text">🔗</span>
