@@ -16,7 +16,6 @@ function submitForm() {
           longUrl: longURL.value,
         })
         .then((response) => {
-          //console.log(response.data.url);
           shortURL.value = response.data.url.shortUrl;
         })
         .catch((error) => {
@@ -27,7 +26,6 @@ function submitForm() {
       console.error(err);
     }
   } else {
-    console.log("noldu");
     longURL.className = "form-control is-invalid";
   }
 }
