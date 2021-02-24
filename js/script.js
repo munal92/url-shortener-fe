@@ -1,14 +1,17 @@
 let longURL = document.getElementById("longurl");
 let shortURL = document.getElementById("shorturl");
 let cleanBtn = document.getElementById("cleanBtn");
+let openNewTabBtn = document.getElementById("openNewTabBtn");
 
 //let axiosURL = "http://localhost:5000";
 let axiosURL = "https://m-url.herokuapp.com";
+let shortenLink = "";
 
 function submitForm() {
   if (longURL.value) {
     longURL.className = "form-control";
     cleanBtn.className = "input-group-text";
+    openNewTabBtn.className = "input-group-text";
 
     try {
       axios
@@ -17,6 +20,7 @@ function submitForm() {
         })
         .then((response) => {
           shortURL.value = response.data.url.shortUrl;
+          shortenLink = response.data.url.shortUrl;
         })
         .catch((error) => {
           console.log(error);
@@ -38,6 +42,11 @@ function clearForm() {
   longURL.value = "";
   shortURL.value = "";
   cleanBtn.className = "input-group-text isShow";
+  openNewTabBtn.className = "input-group-text isShow";
+}
+
+function openWebsite() {
+  window.open(shortenLink, "_blank");
 }
 function wakeUpServer() {
   try {
