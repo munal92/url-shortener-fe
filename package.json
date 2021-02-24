@@ -1,0 +1,20 @@
+{
+  "name": "url-shortener-fe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/munal92/url-shortener-fe.git"
+  },
+  "author": "M Fatih Unal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/munal92/url-shortener-fe/issues"
+  },
+  "homepage": "https://github.com/munal92/url-shortener-fe#readme",
+  
+}
